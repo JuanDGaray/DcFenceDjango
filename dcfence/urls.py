@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from ctypes import util
-from django.urls import path
+from django.urls import path, include
 from customer import views
 from django.contrib import admin
 from django.conf import settings
@@ -24,10 +24,12 @@ from django.conf.urls import handler404
 from customer import utils
 
 
+
 handler404 = views.custom_404_view
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('accounting/', include('core.urls')), 
     path('admin/', admin.site.urls),
     path('signup/', views.signup, name='signup'),
     path('signin/', views.signin, name='signin'),

@@ -16,7 +16,7 @@
     {% endblock %}
   </head>
 <body class="bg-white">
-    <div class="container-fluid  ">
+    <div class="container-fluid ">
     <div class="row ">
       <div class="d-flex flex-column justify-content-between col-sm-auto bg-light sticky-top border-end p-0"  style="height: 100vh;">
               <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap text-center align-items-center p-0">
@@ -63,6 +63,14 @@
                   </a>
               </li>
               {% endcomment %}
+              <li>
+                <a href="/accounting" class="nav-link central {% if view == 'accounting'%} active-nav {% endif%}" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Accounting">
+                    <div class="position-relative">
+                        <i class="bi bi-calculator-fill fs-4 text-secondary"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem; transform: translate(-50%, -50%);">NEW</span>
+                    </div>
+                </a>
+            </li>
               <li>
                 <a href="/production" class="nav-link central {% if view == 'production'%} active-nav {% endif%}" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Production">
                     <i class="bi bi-wrench-adjustable-circle-fill fs-4 text-secondary"></i>
